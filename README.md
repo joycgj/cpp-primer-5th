@@ -1,6 +1,8 @@
 # cpp-primer-5th
 C++ Primer第五版学习资料
 
+http://www.informit.com/store/c-plus-plus-primer-9780321714114
+
 C++Primer第五版——习题答案+详解(完整版)
 https://blog.csdn.net/misayaaaaa/article/details/53786215
 
