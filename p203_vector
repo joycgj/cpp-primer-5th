@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+vector<int>::const_iterator find_val(
+        vector<int>::const_iterator beg,
+        vector<int>::const_iterator end,
+        int value,
+        vector<int>::size_type &occurs) {
+    vector<int>::const_iterator res_iter = end;
+    occurs = 0;
+    for (; beg != end; ++beg) {
+        if (*beg == value) {
+            if (res_iter == end) {
+                res_iter = beg;
+            }
+            ++occurs;
+        }
+    }
+    return res_iter;
+}
+
+int main() {
+    vector<int> myvector{ 1, 42, 3, 42, 5, 42 };
+    vector<int>::size_type i = 0;
+    vector<int>::const_iterator beg = find_val(myvector.begin(), myvector.end(), 42, i);
+    cout << "i=" << i << endl;
+    return 0;
+}
+
